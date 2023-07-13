@@ -89,7 +89,10 @@ a{
     /* transition: all 3s; */
 
 }
-
+.buttons{
+    display: flex;
+    gap: 1.5rem;
+}
 .hero-section-left {
     display: flex;
     flex-direction: column;
@@ -179,11 +182,13 @@ a{
     background-size: 20px 20px;
     animation: scaleImage 5s linear infinite;
 
-
 }
 
 .user-image img {
     z-index: -9;
+    object-fit: cover;
+    height: 345px;
+    width: 390px;
 }
 
 @keyframes scaleImage {
@@ -330,26 +335,30 @@ a{
     gap:120px;
 
 }
+
+
 .project-card{
     width: 90%;
     height: 550px;
-    background-image: url(./images/projects/Project1.png);
+    /* background-image: url(./images/projects/Project1.png); */
     background-size: cover;
     /* background-repeat: no-repeat; */
     position: relative;
+    border: 2px transparent;
+    border-radius: 10px;
     box-shadow: 0px 0px 40px #1f1f1f;
 }
-.project-card::after{
-    content: "";
+/* .project-card::after{
+    content:"" ;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom:0;
-    background-color: #1f1f1f9a;
-    /* transform: scaleX(1); */
+    background-color:#1f1f1f9a;
+    transform: scaleX(0);
     z-index: 0;
-}
+} */
 .project-card::before{
     content: "";
     position: absolute;
@@ -357,6 +366,8 @@ a{
     left: 0;
     right: 0;
     bottom:0;
+    border: 2px transparent;
+    border-radius: 10px;
     background:linear-gradient(45deg,#343d68,#343d68be,#343d687c);
     transform: scaleX(0);
     transform-origin: left;
@@ -365,6 +376,7 @@ a{
 }
 .project-card:hover::before{
     transform: scaleX(1);
+    
 }
 .project-number{
     position: absolute;
@@ -378,6 +390,7 @@ a{
 .project-card:hover .project-number{
     display: block;
 }
+
 .project-number-right{
     right: -40px;
     top:-45px;
@@ -401,7 +414,8 @@ a{
     z-index: 15;
 }
 .project-content-right{
-    right: -10%;
+    right:10%;
+    /* align-items: center; */
     z-index: 15;
 }
 .project-skills-container{
@@ -433,6 +447,9 @@ a{
     color: white;
     font-size: 45px;
 }
+.btn-project{
+    display:none;
+}
 .icon:hover{
     color: var(--bgOrange);
     transition:all 0.3s;
@@ -441,18 +458,21 @@ a{
     transform:scale(1.1);
 }
 #project1{
-    background-image:url(./images/projects/Project1.png)
+    background-image:url(./images/projects/razorpay.png)
 }
 #project2{
     margin-left: 120px;
-    background-image: url(./images/projects/Project2.png);
+    background-image: url(./images/projects/ModernChair.png);
 }
 #project3{
-    background-image: url(./images/projects/Project3.png);
+    background-image: url(https://cdn.icon-icons.com/icons2/1381/PNG/512/java_93883.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #project4{
     margin-left: 120px;
-    background-image: url(./images/projects/Project4.png);
+    background-image: url(./images/projects/parallax.png);
 }
 @media(max-width:1300px){
     .page-header{
